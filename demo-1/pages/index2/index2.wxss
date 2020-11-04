@@ -1,0 +1,16 @@
+.title{
+  font-size: 50rpx;
+  margin: 30rpx;
+}
+
+.question{
+  margin: 50rpx;
+  font-size: 100rpx;
+  font-weight: 800;
+}
+
+
+.questionq{
+  font-size: 50rpx;
+  margin: 30rpx;
+}
