@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="container">
+      <view class="title">
+      第{{indexq+1}}题
+      </view>
+
+      <button bindtap="show" wx:if="{{!show}}">
+        开始聆听
+      </button>
+      <view wx:for="{{question[indexq].text}}" style="color:{{question[indexq].color[index]}};"  wx:if="{{show}}"
+      class="question">
+            {{item}}
+   
+      </view>
+
+      <view wx:if="{{show}}" class="questionq">
+            {{question[indexq].q}}
+      </view>
+   
+      <button wx:for="{{question[indexq].choose}}"  wx:if="{{show}}"   style="margin:30rpx"  bindtap="click"  
+      data-index="{{index}}"   data-item="{{question[indexq]}}"  disabled="{{dis}}"> 
+            {{item}}
+      </button>
+      <view style="color:{{askcolor}}">{{ask}}</view>
+     <view style="margin:30rpx" wx:if="{{show}}"> {{timecount}}</view>
+
+</view>
+
