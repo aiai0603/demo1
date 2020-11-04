@@ -1,0 +1,33 @@
+{
+  "pages":[
+    "pages/index2/index2",
+    "pages/attentionTest-3/attentionTest-3",
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "颜色识别",
+      "iconPath": "pages/下载.jpg",
+      "selectedIconPath": "pages/下载.jpg"
+    },{
+      "pagePath": "pages/index2/index2",
+      "text": "音频识别",
+      "iconPath": "pages/下载.jpg",
+      "selectedIconPath": "pages/下载.jpg"
+    },{
+      "pagePath":  "pages/attentionTest-3/attentionTest-3",
+      "text": "寻找数字",
+      "iconPath": "pages/下载.jpg",
+      "selectedIconPath": "pages/下载.jpg"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
