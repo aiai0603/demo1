@@ -1,5 +1,7 @@
 {
   "pages":[
+    "pages/numbermatch/numbermatch",
+    "pages/numberfind/numberfind",
     "pages/index2/index2",
     "pages/attentionTest-3/attentionTest-3",
     "pages/index/index"
