@@ -114,7 +114,7 @@ clickNumber:function(e){
   //获取点击数值的结构体
   var index=e.currentTarget.dataset.click;
   var selected=this.data.selectedNumber;
-  console.log(this.data.question)
+  
  if(this.data.question[index].color=="white")
 {
 
