@@ -25,61 +25,50 @@ Page({
     flag: 1,
     endtime: "",
 
+    array : ['a', 'b', 'c', 'd', 'e', 
+  'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 
+  'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 
+  'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
+
     //游戏数据
     question:[],
   },
 
  //测试开始
   testStart:function() {
+
     var i;
     var questionTemp=[];
+    var upper;
+    var lower;
     //随机生成数值并存入函数
     for(i=0;i<20;i++){
+      var flag=0;
+      while(flag==0){
+          upper=Math.floor(Math.random()*26+26);
+          lower=Math.floor(Math.random()*26);
+          if(upper-lower!=26){
+            flag=1;
+          }
+      }
       var temp={
-        number:Math.floor(Math.random()*10),
+        number:this.data.array[upper]+this.data.array[lower],
         font:400,
         color:"white"
       }
       questionTemp.push(temp);
+     
+    }
+    var site=0;
+    for(var i=0;i<3;i++){
+      site+=Math.floor(Math.random()*5+1)
+      var fl=Math.floor(Math.random()*26+26);
+      questionTemp[site].number=(this.data.array[fl]+this.data.array[fl-26]);
+    }
+      
       this.setData({
           question:questionTemp
       })
-    }
-
-    //随机生成三个黑体数值
-    var flag1=false;
-    var flag2=false;
-    var flag3=false;
-    while(!flag1){
-      var now=Math.floor(Math.random()*20);
-      if( this.data.question[now].font==400){
-        this.setData({
-          [`question[${now}].font`] : 1000,
-        
-        });
-          flag1=true;
-      }
-    }
-
-    while(!flag2){
-      var now=Math.floor(Math.random()*20);
-      if( this.data.question[now].font==400){
-        this.setData({
-          [`question[${now}].font`] : 1000
-        });
-          flag2=true;
-      }
-    }
-
-    while(!flag3){
-      var now=Math.floor(Math.random()*20);
-      if( this.data.question[now].font==400){
-        this.setData({
-          [`question[${now}].font`] : 1000
-        });
-          flag3=true;
-      }
-    }
         this.setData({
           showButton:false,
           showTable:true
@@ -94,7 +83,7 @@ clickNumber:function(e){
   var index=e.currentTarget.dataset.click;
   var selected=this.data.selectedNumber;
   //黑体数值则将背景变为橙色
-  if(this.data.question[index].font==1000&&this.data.question[index].color!="orange"){
+  if(this.data.array.indexOf(this.data.question[index].number[0])-this.data.array.indexOf(this.data.question[index].number[1])==26&&this.data.question[index].color!="orange"){
     this.setData({
       [`question[${index}].color`] : "orange",
       selectedNumber:selected+1
