@@ -5,7 +5,7 @@
 -->
 <view class="container">
       <view class="title">
-            寻找数字
+           接受性注意
       </view>
       <!--点击生成随机的题目-->
       <button bindtap="testStart" wx:if="{{showButton}}">
