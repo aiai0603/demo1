@@ -1,10 +1,13 @@
 {
   "pages":[
+ 
+    "pages/index/index",
+    "pages/visionSearch/visionSearch",
     "pages/numbermatch/numbermatch",
     "pages/numberfind/numberfind",
     "pages/index2/index2",
-    "pages/attentionTest-3/attentionTest-3",
-    "pages/index/index"
+    "pages/attentionTest-3/attentionTest-3"
+   
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -19,12 +22,17 @@
       "iconPath": "pages/下载.jpg",
       "selectedIconPath": "pages/下载.jpg"
     },{
-      "pagePath": "pages/index2/index2",
-      "text": "音频识别",
+      "pagePath":  "pages/visionSearch/visionSearch",
+      "text": "视觉搜索",
       "iconPath": "pages/下载.jpg",
       "selectedIconPath": "pages/下载.jpg"
     },{
-      "pagePath":  "pages/attentionTest-3/attentionTest-3",
+      "pagePath":  "pages/numbermatch/numbermatch",
+      "text": "接受性注意",
+      "iconPath": "pages/下载.jpg",
+      "selectedIconPath": "pages/下载.jpg"
+    },{
+      "pagePath":  "pages/numberfind/numberfind",
       "text": "寻找数字",
       "iconPath": "pages/下载.jpg",
       "selectedIconPath": "pages/下载.jpg"
