@@ -11,6 +11,6 @@
 
 
 .questionq{
-  font-size: 50rpx;
+  font-size: 40rpx;
   margin: 30rpx;
 }
