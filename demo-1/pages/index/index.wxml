@@ -7,19 +7,22 @@
       <button bindtap="show" wx:if="{{showbu}}">
         开始记忆
       </button>
-      <view wx:for="{{question[indexq].text}}" style="color:{{question[indexq].color[index]}};"  wx:if="{{show}}"
+      <view wx:for="{{text}}" style="color:{{allcolor[color[index]]}};"  wx:if="{{show}}"
       class="question">
-            {{item}}
+            {{alltext[item]}}
       </view>
       <view  wx:if="{{showq}}" class="questionq">
-      {{question[indexq].q}}
+      {{q}}
       </view>
-      <button wx:for="{{question[indexq].choose}}"  wx:if="{{showq}}"   style="margin:30rpx"  bindtap="click"  
-      data-index="{{index}}"   data-item="{{question[indexq]}}"  disabled="{{dis}}"> 
-            {{item}}
+      <button wx:for="{{choose}}"  wx:if="{{showq}}"   style="margin:20rpx"  bindtap="click"  
+      data-index="{{item}}"    disabled="{{dis}}"> 
+            {{alltext[item]}}
       </button>
       <view style="color:{{askcolor}}">{{ask}}</view>
+      <view style="margin:30rpx"> 共15题,您答对了{{right}}题</view>
      <view style="margin:30rpx"> {{timecount}}</view>
+
+     
 
 </view>
 
